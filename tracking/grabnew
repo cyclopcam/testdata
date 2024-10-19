@@ -1,0 +1,16 @@
+#!/bin/bash
+
+for i in $(seq -w 0001 9999); do
+    fn_ld="${i}-LD.mp4"
+    if [[ ! -f "$fn_ld" ]]; then
+        #echo "$fn_ld"
+		fn_hd="${i}-HD.mp4"
+        break
+    fi
+done
+
+echo "$fn_ld"
+echo "$fn_hd"
+
+cp ~/cyclops/clip-LD.mp4 $fn_ld
+cp ~/cyclops/clip-HD.mp4 $fn_hd
